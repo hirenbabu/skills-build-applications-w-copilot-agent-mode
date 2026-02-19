@@ -16,8 +16,11 @@ router = DefaultRouter()
 
 def api_root(_request):
     return JsonResponse({
-        "message": "OctoFit Tracker API",
-        "base_url": base_url,
+        "activities": f"{base_url}/api/activities/",
+        "users": f"{base_url}/api/users/",
+        "teams": f"{base_url}/api/teams/",
+        "leaderboard": f"{base_url}/api/leaderboard/",
+        "workouts": f"{base_url}/api/workouts/",
     })
 
 urlpatterns = [
